@@ -6,6 +6,10 @@ import java.util.List;
 public class PrimeFactorSequence {
     private List<Integer> primes;
     private int upperBound;
+    public static void main(String[] args) {
+        PrimeFactorSequence pfs = new PrimeFactorSequence(2);
+        List<Integer> expOutput = pfs.primeFactorSequence();
+    }
 
     /**
      * Create a PrimeFactorSequence object with a defined upperbound.
@@ -16,6 +20,7 @@ public class PrimeFactorSequence {
     public PrimeFactorSequence(int _upperBound) {
         upperBound = _upperBound;
         primes = Primes.getPrimes(upperBound);
+
     }
 
     /**
@@ -27,6 +32,11 @@ public class PrimeFactorSequence {
      */
     public List<Integer> primeFactorSequence() {
         List<Integer> seq = new ArrayList<>();
+        System.out.println(primes);
+        for (int i = 0; i < PrimeFactorSequence; i++)
+        {
+            seq.add(Primes.getPrimes(i));
+        }
         // TODO: Implement this method
         return seq;
     }
